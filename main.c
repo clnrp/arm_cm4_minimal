@@ -1,4 +1,4 @@
-#include "stm32f407xx.h" 
+#include "ARMCM4.h" 
 
 int a;
 int b;
@@ -23,8 +23,8 @@ void main(){
 	
 	while(1){
 		__STRT(0x00, (volatile uint32_t *)(0x40020C14));
-		delay(1000000);
+		delay(100000);
 		__STRT((1<<12), (volatile uint32_t *)(0x40020C14));
-		delay(1000000);
+		delay(100000);
 	}
 }
